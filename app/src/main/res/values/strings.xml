@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">音速风暴</string>
+    <string name="title_welcome">Welcome</string>
+    <string name="action_settings">Settings</string>
+    <string name="btn_scan">Scan</string>
+    <string name="btn_link">Link</string>
+    <string name="support_bluetooth">是否支持蓝牙？</string>
+    <string name="is_bluetooth_turn_on">蓝牙打开？</string>
+    <string name="turn_on_blue_tooth">打开蓝牙</string>
+    <string name="turn_off_blue_tooth">关闭蓝牙</string>
+    <string name="show_result">结果</string>
+    <string name="menu_text_train">训练</string>
+    <string name="menu_text_race">比赛</string>
+    <string name="menu_text_setting">设置</string>
+    
+    <string name="setting_lap">圈数：</string>
+    <string name="setting_btn_ok">OK</string>
+    
+    <string name="fastest_lap">最快单圈</string>
+    <string name="total_time">总用时</string>
+    <string name="time_init">00:00:00</string>
+    
+    <string name="race_line_one">Line 1</string>
+    <string name="race_line_two">Line 2</string>
+    <string name="race_lap_init">00/00</string>
+    
+    <string name="text_rank_1">Rank 1</string>
+    <string name="text_rank_2">Rank 2</string>
+    
+    <string name="trainpaneltitle">训练</string>
+    <string name="racepaneltitle">比赛</string>
+    
+    <string name="refueling">正在加油</string>
+    <string name="please_refuel">请加油</string>
+    <string name="over">比赛完成</string>
+    <string name="damaged">小车损毁</string>
+    
+    <string name="laps">圈数</string>
+    <string name="oil_dama">油耗</string>
+    <string name="voice">音效</string>
+    
+    <string name="setting">Honey,这就是设置页.</string>
+    <string name="guiding">Honey,这就是新手指导页.</string>
+    
+    <string name="send_img_file_not_exist">文件不存在</string>
+    <string name="errcode_success">分享成功</string>
+    <string name="errcode_cancel">取消分享</string>
+    <string name="errcode_deny">分享被拒绝</string>
+    <string name="errcode_unknown">分享返回</string>
+    
+	<string name="yonghu">用户名</string>
+	
+	<string name="traintext">训练模式下，可以练习赛车技巧和比赛技巧。此栏目里面的设置均是默认值，不能进行设置。</string>
+	<string name="racetext">比赛模式下，可以进行双人竞技。个性化的比赛圈数和油耗可以在设置里设定。（如不设置将按默认设置进行）</string>
+	<string name="settext">此栏目可以设置用户名、比赛圈数、油耗、以及选择使用的赛道。</string>
+	
+	<string name="traintext2">In training mode,you can pratice racing skills.The setting is default in 
+	    training mode,which cannot be changed.</string>
+	<string name="racetext2">In tournament mode,you can race with another player.You can custom-ize 
+	    tournament laps and fuel comsumpetion in settings.</string>
+	<string name="settext2">In settings,you can enter player\'s name,tourna-ment laps,fuel comsum-ption,
+	    and track layout.</string>
+	
+	<string name="usename">请输入用户名</string>
+	
+</resources>
+

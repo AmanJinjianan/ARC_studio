@@ -1,0 +1,137 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mama"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+   >
+
+    <ImageButton
+        android:id="@+id/menu_settingBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/setting" />
+
+    <ImageButton
+        android:id="@+id/menu_guidingBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/guiding" />
+
+    <ImageButton
+        android:id="@+id/athensBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/athens" />
+
+    <ImageButton
+        android:id="@+id/rioBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rio" />
+
+    <ImageButton
+        android:id="@+id/new_yorkBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/new_york" />
+
+    <ImageButton
+        android:id="@+id/londonBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/london" />
+
+    <ImageButton
+        android:id="@+id/beijing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/beijing" />
+
+    <ImageButton
+        android:id="@+id/paris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/paris" />
+
+    <ImageButton
+        android:id="@+id/oslo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/oslo" />
+
+    <ImageButton
+        android:id="@+id/prague"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/prague" />
+
+    <ImageButton
+        android:id="@+id/copenhague"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/copenhague" />
+
+    <ImageButton
+        android:id="@+id/rome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rome" />
+
+    <ImageButton
+        android:id="@+id/stockholm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stockholm" />
+
+    <ImageButton
+        android:id="@+id/berlin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/berlin" />
+
+    <ImageButton
+        android:id="@+id/tokyo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tokyo" />
+
+    <ImageButton
+        android:id="@+id/mexico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mexico" />
+
+    <ImageButton
+        android:id="@+id/sydney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sydney" />
+
+    <ImageButton
+        android:id="@+id/toronto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toronto" />
+
+    <ImageButton
+        android:id="@+id/saint_peter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/saint_peter" />
+
+    <ImageButton
+        android:id="@+id/custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom" />
+    <!--
+             <ImageButton
+            android:id="@+id/menu_guide_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="guide"
+            android:background="@drawable/menu_guide"
+             />
+    -->
+
+</FrameLayout>

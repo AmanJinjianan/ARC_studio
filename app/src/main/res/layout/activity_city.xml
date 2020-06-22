@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <FrameLayout
+        android:id="@+id/thecity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageButton
+            android:id="@+id/dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dismissbtn" />
+
+        <ImageButton
+            android:id="@+id/trainbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           />
+
+        <ImageButton
+            android:id="@+id/racebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+    </FrameLayout>
+
+</FrameLayout>

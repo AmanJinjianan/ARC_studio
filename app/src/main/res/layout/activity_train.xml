@@ -1,0 +1,68 @@
+			
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/train_background"
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation = "vertical"
+    >
+	<RelativeLayout
+	    android:id="@+id/RelativeLayout_top_train"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="10dp"
+	    android:minHeight="50dp"
+	     >
+
+	    <ImageButton
+	        android:id="@+id/train_activity_bluetooth_blue"
+	        android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/bluetooth_blue"
+            android:contentDescription="@null" />
+	    <ImageButton
+	        android:id="@+id/train_activity_back"
+	        android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="9dp"
+            android:contentDescription="@null"
+             />
+	   
+
+	</RelativeLayout>
+    
+    <FrameLayout
+        
+        android:id="@+id/trainLayoutOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+       
+        
+    </FrameLayout>
+    
+    <RelativeLayout 
+        android:layout_weight="1"
+         android:id="@+id/centrallogo_train"
+         android:layout_width="match_parent"
+       	 android:layout_height="0dp"
+       	 android:gravity="center"
+       	 >
+    	    
+    </RelativeLayout>
+    
+    <FrameLayout
+        
+        android:id="@+id/trainLayoutTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    	    
+    </FrameLayout>
+    
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/light_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    >
+
+    <ImageView
+        android:id="@+id/dialog_light_green_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/light_green"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/dialog_light_green_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/light_green"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/dialog_light_green_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/light_green"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/dialog_light_green_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/light_green"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/thelaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="laps"
+        android:textColor="@color/white"
+        android:textSize="60sp" />
+
+    <!--
+         <TextView
+	    android:id="@+id/theline"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="laps" 
+	    android:textColor="@color/white"
+	    android:textSize="60sp"/>
+    -->
+
+    <ImageView
+        android:id="@+id/goview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/go" />
+
+    
+         <ImageView
+	    android:id="@+id/light_logo"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	     />
+   
+
+</FrameLayout>

@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/race_background"
+    android:layout_weight="1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_top_train"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:minHeight="50dp" >
+
+        <ImageButton
+            android:id="@+id/race_bluetooth_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/bluetooth_blue"
+            android:contentDescription="@null" />
+
+        <ImageButton
+            android:id="@+id/race_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/back_btn"
+            android:contentDescription="@null"
+             />
+        <!--
+             <TextView
+	        android:id="@+id/train_text"
+	        android:layout_width="150dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:background="@drawable/menu_traintext"
+	        android:contentDescription="@null"
+	        android:textSize="30sp" />
+        -->
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/RaceLayoutOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/centrallogo_race"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center" >
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/RaceLayoutTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+</LinearLayout>

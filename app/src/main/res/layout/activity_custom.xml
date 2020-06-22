@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/custom_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         >
+        
+         <ImageButton
+            android:id="@+id/custom_settingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            />
+
+        <ImageButton
+            android:id="@+id/custom_guidingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+             />
+
+        <ImageButton
+            android:id="@+id/custom_trainbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+
+        <ImageButton
+            android:id="@+id/custom_racebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+
+        <TextView
+            android:id="@+id/textView_laps"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_back"
+            android:gravity="center"
+             />
+
+        <ImageButton
+            android:id="@+id/imageButton_reduce1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reduce" />
+
+        <ImageButton
+            android:id="@+id/imageButton_plus1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/plus" />
+
+        <TextView
+            android:id="@+id/textView_oils"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_back"
+            android:gravity="center"
+            />
+
+        <ImageButton
+            android:id="@+id/imageButton_reduce2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reduce" />
+
+        <ImageButton
+            android:id="@+id/imageButton_plus2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/plus" />
+
+        <ImageButton
+            android:id="@+id/custom_dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dismissbtn" />
+    </FrameLayout>
+

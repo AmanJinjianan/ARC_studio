@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+   	android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/lap_select_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+		android:textSize="20sp"
+        android:text="@string/setting_lap" />
+    
+	<NumberPicker
+        android:id="@+id/lap_picker"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/lap_select_textView"
+        android:orientation="vertical"/>
+		
+	
+	<Button
+	    android:id="@+id/btn_lap_select_ok"
+	    android:layout_width="100dp"
+	    android:layout_height="60dp"
+	    android:layout_below="@+id/lap_picker"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginLeft="20dp"
+	    android:text="@string/setting_btn_ok"
+	    android:textSize="20sp"/>
+	
+</RelativeLayout>

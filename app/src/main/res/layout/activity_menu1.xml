@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mama"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_top_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minHeight="50dp"
+        >
+
+        <ImageButton
+            android:id="@+id/btn_menu_activity_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_btn"
+            android:contentDescription="@null"
+            android:onClick="activity_back" />
+
+        <ImageButton
+            android:id="@+id/btn_menu_activity_bluetooth_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bluetooth_blue"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="9" >
+
+        <ImageButton
+            android:id="@+id/menu_train_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_train"
+            android:onClick="train" />
+
+        <ImageButton
+            android:id="@+id/menu_race_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_race"
+            android:onClick="race" />
+    </FrameLayout>
+
+</LinearLayout>
