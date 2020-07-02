@@ -3,6 +3,7 @@
     android:id="@+id/result_r"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="2dp"
     android:orientation="vertical" >
 
     <RelativeLayout
@@ -81,5 +82,19 @@
             android:background="@drawable/blueface" />
 
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="18dp">
 
+        <ImageView
+            android:id="@+id/iv_result_train_logo"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/logo">
+        </ImageView>
+
+    </RelativeLayout>
 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.ui;
 
 import com.bluetoothARC.R;
+import com.tools.ScreenUtil;
 
 import android.app.Application;
 
@@ -45,5 +46,9 @@ public class AppContext extends Application
 	{
 		super.onCreate();
 		instance = this;
+		scaledDensity = ScreenUtil.getScreenDensity(this);
+		screenWidth = ScreenUtil.getScreenWidthPixels(this);
+		screenHeight = ScreenUtil.getScreenHeightPixels(this);
+		inch = (float) (Math.sqrt(screenHeight*screenHeight+screenWidth*screenWidth)/(ScreenUtil.getDisplayMetrics(this).densityDpi));
 	}
 }

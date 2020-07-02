@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:layout_centerInParent="true"
+    android:background="@drawable/bg_city">
 
-    <FrameLayout
+    <com.myview.MyFrameLayoutForCity
         android:id="@+id/thecity"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
-        <ImageButton
-            android:id="@+id/dismiss"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/dismissbtn" />
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30px"
+        android:layout_centerInParent="true"
+        android:background="@drawable/tokyo_mid_p">
 
         <ImageButton
             android:id="@+id/trainbtn"
@@ -27,6 +24,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
              />
-    </FrameLayout>
-
-</FrameLayout>
+    </com.myview.MyFrameLayoutForCity>
+    <ImageButton
+        android:id="@+id/dismiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dismissbtn" />
+</RelativeLayout>

@@ -327,19 +327,6 @@ public class ScanActivity extends Activity{
 
             if(BLEconfig.ACTION_CHARACTER_CHANGE.equals(action)){
 
-				//Toast.makeText(ScanActivity.this, "dafa..............."+intent.getIntExtra("value", -2), Toast.LENGTH_SHORT).show();
-
-                //tmp_byte = characteristic.getValue();
-            	// Log.e("falter","::::::::::::::::。。。。。。。。。。。action。:"+intent.getIntExtra("value", -2));
-                //byte[] tmp_byte = intent.getByteArrayExtra("value");
-//                tmp = "";
-//                for (int i = 0; i < tmp_byte.length; i++) {
-//                    hex = Integer.toHexString(tmp_byte[i] & 0xFF);
-//                    if (hex.length() == 1) {
-//                        hex = '0' + hex;
-//                    }
-//                    tmp = tmp + hex;
-//                }
             }else if(BLEconfig.ACTION_STATE_CONNECTED.equals(action)){
 
             }else if(BLEconfig.ACTION_STATE_DISCONNECTED.equals(action)){
@@ -364,47 +351,6 @@ public class ScanActivity extends Activity{
             }
         }
     }
-	void InitBle(){/*
-		mBLE = BLEconfig.getInstance();
-		mHandler = new Handler();
-		
-		if(mScanThread == null)
-		mScanThread = new MyScanThread();
-		//check weather the system is support BlueTooth
-		final BluetoothManager bluetoothManager =(BluetoothManager)getSystemService(Context.BLUETOOTH_SERVICE);
-		mBluetoothAdapter = bluetoothManager.getAdapter();
-		if (mBluetoothAdapter == null) {
-            Toast.makeText(this, "error_bluetooth_not_supported", Toast.LENGTH_SHORT).show();
-            finish();
-            return;
-		}
-		mBluetoothAdapter.enable();
-		
-		if(!mBLE.initialize(bluetoothManager)){
-			Log.e("TAG", "Unable to initialize Bluetooth");
-            finish();
-		}
-		
-		//callback when find service
-		mBLE.setOnServiceDiscoverListener(mOnServiceDiscover);
-		
-		if (VoiceThread == null) {
-			VoiceThread = new TheVoiceThread();
-			VoiceThread.start();
-		}
-	new Handler().postDelayed(new Runnable() {
-			
-			@Override
-			public void run() {
-				
-				//mBluetoothAdapter.enable();
-				
-				//start scanning thread
-				mScanThread.start();
-			}
-		},2000);
-	
-	*/}
 	ArrayList<String> unPermissionList;
 	private void checkBluetoothPermission() { 
 		
@@ -417,17 +363,6 @@ public class ScanActivity extends Activity{
 				Manifest.permission.ACCESS_COARSE_LOCATION,
 				Manifest.permission.BLUETOOTH,
 				Manifest.permission.BLUETOOTH_ADMIN,
-				
-				//Manifest.permission.WRITE_EXTERNAL_STORAGE,
-				//Manifest.permission.ACCESS_FINE_LOCATION,
-//				Manifest.permission.CALL_PHONE,
-//				Manifest.permission.READ_LOGS,
-//				Manifest.permission.READ_PHONE_STATE,
-//				//Manifest.permission.READ_EXTERNAL_STORAGE,
-//				Manifest.permission.SET_DEBUG_APP,
-//				Manifest.permission.SYSTEM_ALERT_WINDOW,
-//				Manifest.permission.GET_ACCOUNTS,
-//				Manifest.permission.WRITE_APN_SETTINGS
 			};
 			unPermissionList = new ArrayList<String>();
 			try {

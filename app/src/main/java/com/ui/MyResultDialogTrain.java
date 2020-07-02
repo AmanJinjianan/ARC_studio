@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -22,7 +23,7 @@ public class MyResultDialogTrain extends Dialog implements View.OnClickListener{
 	private TextView textViewLap1;
 	private TextView textViewfast1;
 	private ImageView face1;
-	
+	private ImageView light_logo;
 	private ImageButton imageback,imageBluetooth;
 	//ProgressBar theBar;
 	
@@ -115,8 +116,8 @@ public class MyResultDialogTrain extends Dialog implements View.OnClickListener{
 		
 		textViewfast1 = new TextView(getContext());
 		textViewfast2 = new TextView(getContext());
-		
-		
+
+
 		if (AppContext.device == "phone"){
 			
 			RelativeLayout.LayoutParams paramsjh = new RelativeLayout.LayoutParams((int) (screenWidth*0.07),(int)(screenWidth*0.1));
@@ -127,35 +128,41 @@ public class MyResultDialogTrain extends Dialog implements View.OnClickListener{
 			paramsj.setMargins((int)(screenWidth*0.78), (int) (screenHeight*0.00), 0, 0);
 			imageback.setLayoutParams(paramsj);
 			
-			setPosi(useName1, "胖胖", Color.YELLOW, 0.64, 0.1518);//1558
-			setPosi(useName2, "胖胖", Color.WHITE, 0.64, 0.4267);//4307
+			setPosi(useName1, "胖胖", Color.YELLOW, 0.64, 0.158);//1518
+			setPosi(useName2, "胖胖", Color.WHITE, 0.64, 0.613);//4307
 			
-			setPosi(textViewLine1, "Line", Color.YELLOW, 0.64, 0.1818);
-			setPosi(textViewLine2, "Line", Color.WHITE, 0.64, 0.4567);
+			setPosi(textViewLine1, "Line", Color.YELLOW, 0.64, 0.215);
+			setPosi(textViewLine2, "Line", Color.WHITE, 0.64, 0.670);
 			
 			RelativeLayout.LayoutParams paramsN1 = new RelativeLayout.LayoutParams((int)(screenWidth*0.18),(int)(screenWidth*0.18));
-			paramsN1.setMargins((int) (screenWidth*0.15), (int) (screenHeight*0.1867), 0, 0);
+			paramsN1.setMargins((int) (screenWidth*0.15), (int) (screenWidth/0.97*0.24), 0, 0);
 			face1.setLayoutParams(paramsN1);
+
 			RelativeLayout.LayoutParams paramsN2 = new RelativeLayout.LayoutParams((int)(screenWidth*0.18),(int)(screenWidth*0.18));
-			paramsN2.setMargins((int) (screenWidth*0.15), (int) (screenHeight*0.454), 0, 0);
+			paramsN2.setMargins((int) (screenWidth*0.15), (int) (screenWidth/0.97*0.69), 0, 0);
 			face2.setLayoutParams(paramsN2);
 			
-			setPosi(textViewTime1, "00:00:000", Color.YELLOW,  0.64, 0.2178);
-			setPosi(textViewTime2, "00:00:000", Color.WHITE, 0.64, 0.4897);
+			setPosi(textViewTime1, "00:00:000", Color.YELLOW,  0.64, 0.27);
+			setPosi(textViewTime2, "00:00:000", Color.WHITE, 0.64, 0.733);
 			
-			setPosi(textViewLap1, "99", Color.YELLOW, 0.64,0.2487);
-			setPosi(textViewLap2, "99", Color.WHITE, 0.64, 0.5237);
+			setPosi(textViewLap1, "99", Color.YELLOW, 0.64,0.333);
+			setPosi(textViewLap2, "99", Color.WHITE, 0.64, 0.789);
 			
-			setPosi(textViewfast1, "00:00:000", Color.YELLOW, 0.64, 0.2797);
-			setPosi(textViewfast2, "00:00:000", Color.WHITE, 0.64, 0.5547);
+			setPosi(textViewfast1, "00:00:000", Color.YELLOW, 0.64, 0.389);
+			setPosi(textViewfast2, "00:00:000", Color.WHITE, 0.64, 0.848);
 			if (AppContext.lanuage) {//zh
-					findViewById(R.id.result_t).setBackgroundResource(R.drawable.background_result_tp);
-					imageback.setBackgroundResource(R.drawable.back_btn);
-				}else {
-					findViewById(R.id.result_t).setBackgroundResource(R.drawable.background_result_tpe);
-					imageback.setBackgroundResource(R.drawable.back_btne);
-				}
-			}else if(AppContext.device == "pad"){
+				findViewById(R.id.result_t).setBackgroundResource(R.drawable.bg_result_train);
+				findViewById(R.id.center_end110_train).setBackgroundResource(R.drawable.bg_mid_train_result);
+				findViewById(R.id.iv_result_train_logo).setBackgroundResource(R.drawable.logo);
+				imageback.setBackgroundResource(R.drawable.back_btn);
+			} else {
+				findViewById(R.id.result_t).setBackgroundResource(R.drawable.bg_result_train_e);
+				findViewById(R.id.center_end110_train).setBackgroundResource(R.drawable.bg_mid_train_result_e);
+				findViewById(R.id.iv_result_train_logo).setBackgroundResource(R.drawable.logo2);
+				imageback.setBackgroundResource(R.drawable.back_btne);
+			}
+			}
+		else if(AppContext.device == "pad"){
 				
 				RelativeLayout.LayoutParams paramsjh = new RelativeLayout.LayoutParams((int) (screenWidth*0.07),(int)(screenWidth*0.1));
 				paramsjh.setMargins((int)(screenWidth*0.00), (int) (screenHeight*0.00), 0, 0);
@@ -188,10 +195,12 @@ public class MyResultDialogTrain extends Dialog implements View.OnClickListener{
 				setPosi(textViewfast2, "00:00:000", Color.WHITE, 0.64, 0.657);//652
 				
 				if (AppContext.lanuage) {//zh
-					findViewById(R.id.result_t).setBackgroundResource(R.drawable.background_result_t);
+					findViewById(R.id.result_t).setBackgroundResource(R.drawable.bg_result_train);
+					findViewById(R.id.center_end110_train).setBackgroundResource(R.drawable.bg_mid_train_result);
 					imageback.setBackgroundResource(R.drawable.back_btn);
 				}else {
-					findViewById(R.id.result_t).setBackgroundResource(R.drawable.background_result_te);
+					findViewById(R.id.result_t).setBackgroundResource(R.drawable.bg_result_train_e);
+					findViewById(R.id.center_end110_train).setBackgroundResource(R.drawable.bg_mid_train_result_e);
 					imageback.setBackgroundResource(R.drawable.back_btne);
 				}
 			}
@@ -355,7 +364,7 @@ public class MyResultDialogTrain extends Dialog implements View.OnClickListener{
 		textView.setTextSize(textSize);
 		textView.setTextColor(colors);
 		RelativeLayout.LayoutParams params1 = new RelativeLayout.LayoutParams(android.view.ViewGroup.LayoutParams.WRAP_CONTENT,android.view.ViewGroup.LayoutParams.WRAP_CONTENT);
-		params1.setMargins((int) (screenWidth*leftPer), (int) (screenHeight*topPer), 0, 0);
+		params1.setMargins((int) (screenWidth*leftPer*1.06), (int) (screenWidth/0.97*topPer), 0, 0);
 		center_end.addView(textView, params1);
 	}
 	private String timeFormat(long time)

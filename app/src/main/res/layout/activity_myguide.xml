@@ -1,21 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/myguide_back"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-  >
-
+    android:background="@drawable/bg_city">
     <ImageButton
         android:id="@+id/guide_settingBtn"
         android:layout_width="86dp"
-        android:layout_height="90dp"
-         />
+        android:layout_height="90dp"/>
 
     <ImageButton
         android:id="@+id/guide_guidingBtn"
         android:layout_width="86dp"
         android:layout_height="90dp"
-         />
+        />
+    <com.myview.MyFrameLayout
+        android:id="@+id/myguide_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30px"
+        android:layout_centerInParent="true">
+
+        <ImageButton
+            android:id="@+id/imageButton_en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/guide_en" />
+
+        <ImageButton
+            android:id="@+id/imageButton_cn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/guide_cn" />
+
+        <ImageButton
+            android:id="@+id/imageButton_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </com.myview.MyFrameLayout>
 
     <ImageButton
         android:id="@+id/imageButton_exit"
@@ -23,22 +46,4 @@
         android:layout_height="wrap_content"
         android:background="@drawable/dismissbtn" />
 
-    <ImageButton
-        android:id="@+id/imageButton_en"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/guide_en" />
-
-    <ImageButton
-        android:id="@+id/imageButton_cn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/guide_cn" />
-
-    <ImageButton
-        android:id="@+id/imageButton_yes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-         />
-
-</FrameLayout>
+</RelativeLayout>

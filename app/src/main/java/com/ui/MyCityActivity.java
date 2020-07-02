@@ -2,6 +2,7 @@ package com.ui;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.DisplayMetrics;
@@ -10,10 +11,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 
 import com.bluetoothARC.R;
 import com.connect.BLEconfig;
 import com.connect.Tools;
+import com.tools.ScreenShotUtils;
+import com.tools.ScreenUtil;
 
 public class MyCityActivity extends Activity implements View.OnClickListener{
 
@@ -228,87 +232,87 @@ public class MyCityActivity extends Activity implements View.OnClickListener{
 				case R.id.athensBtn:
 					AppContext.laps = 10;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.athenskphone);
+					fLayout.setBackgroundResource(R.drawable.athens_mid_p);
 					break;
 				case R.id.rioBtn:
 					AppContext.laps = 15;
 					AppContext.oil_consum = 9;
-					fLayout.setBackgroundResource(R.drawable.riokphone);
+					fLayout.setBackgroundResource(R.drawable.riok_mid_p);
 					break;
 				case R.id.new_yorkBtn:
 					AppContext.laps = 16;
 					AppContext.oil_consum = 10;
-					fLayout.setBackgroundResource(R.drawable.new_yorkkphone);
+					//fLayout.setBackgroundResource(R.drawable.new_york_mid_p);
 					break;
 				case R.id.londonBtn:
 					AppContext.laps = 10;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.londonkphone);
+					fLayout.setBackgroundResource(R.drawable.london_mid_p);
 					break;
 				case R.id.beijing:
 					AppContext.laps = 17;
 					AppContext.oil_consum = 9;
-					fLayout.setBackgroundResource(R.drawable.beijingkphone);
+					fLayout.setBackgroundResource(R.drawable.beijing_mid_p);
 					break;
 				case R.id.paris:
 					AppContext.laps = 13;
 					AppContext.oil_consum = 9;
-					fLayout.setBackgroundResource(R.drawable.pariskphone);
+					fLayout.setBackgroundResource(R.drawable.paris_mid_p);
 					break;
 				case R.id.oslo:
 					AppContext.laps = 12;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.oslokphone);
+					fLayout.setBackgroundResource(R.drawable.oslok_mid_p);
 					break;
 				case R.id.prague:
 					AppContext.laps = 9;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.praguekphone);
+					fLayout.setBackgroundResource(R.drawable.prague_mid_p);
 					break;
 				case R.id.copenhague:
 					AppContext.laps = 9;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.copenhaguekphone);
+					fLayout.setBackgroundResource(R.drawable.copenhague_mid_p);
 					break;
 				case R.id.rome:
 					AppContext.laps = 9;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.romekphone);
+					fLayout.setBackgroundResource(R.drawable.rome_mid_p);
 					break;
 				case R.id.stockholm:
 					AppContext.laps = 13;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.stockholmkphone);
+					fLayout.setBackgroundResource(R.drawable.stockhplm_mid_p);
 					break;
 				case R.id.berlin:
 					AppContext.laps = 11;
 					AppContext.oil_consum = 9;
-					fLayout.setBackgroundResource(R.drawable.berlinkphone);
+					fLayout.setBackgroundResource(R.drawable.berlin_mid_p);
 					break;
 				case R.id.tokyo:
 					AppContext.laps = 12;
 					AppContext.oil_consum = 9;
-					fLayout.setBackgroundResource(R.drawable.tokyokphone);
+					fLayout.setBackgroundResource(R.drawable.tokyo_mid_p);
 					break;
 				case R.id.mexico:
 					AppContext.laps = 14;
 					AppContext.oil_consum = 9;
-					fLayout.setBackgroundResource(R.drawable.mexicokphone);
+					fLayout.setBackgroundResource(R.drawable.mexico_mid_p);
 					break;
 				case R.id.sydney:
 					AppContext.laps = 14;
 					AppContext.oil_consum = 10;
-					fLayout.setBackgroundResource(R.drawable.sydneykphone);
+					fLayout.setBackgroundResource(R.drawable.sydney_mid_p);
 					break;
 				case R.id.toronto:
 					AppContext.laps = 18;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.torontokphone);
+					fLayout.setBackgroundResource(R.drawable.toronto_mid_p);
 					break;
 				case R.id.saint_peter:
 					AppContext.laps = 19;
 					AppContext.oil_consum = 9;
-					fLayout.setBackgroundResource(R.drawable.saint_peterkphone);
+					fLayout.setBackgroundResource(R.drawable.saintperter_mid_p);
 					break;
 				default:
 					break;
@@ -319,87 +323,87 @@ public class MyCityActivity extends Activity implements View.OnClickListener{
 				case R.id.athensBtn:
 					AppContext.laps = 10;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.athenskephone);
+					fLayout.setBackgroundResource(R.drawable.athens_mid_pe);
 					break;
 				case R.id.rioBtn:
 					AppContext.laps = 15;
 					AppContext.oil_consum = 9;
-					fLayout.setBackgroundResource(R.drawable.riokephone);
+					fLayout.setBackgroundResource(R.drawable.riok_mid_pe);
 					break;
 				case R.id.new_yorkBtn:
 					AppContext.laps = 16;
 					AppContext.oil_consum = 10;
-					fLayout.setBackgroundResource(R.drawable.new_yorkkephone);
+					fLayout.setBackgroundResource(R.drawable.new_york_mid_pe);
 					break;
 				case R.id.londonBtn:
 					AppContext.laps = 10;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.londonkephone);
+					fLayout.setBackgroundResource(R.drawable.london_mid_pe);
 					break;
 				case R.id.beijing:
 					AppContext.laps = 17;
 					AppContext.oil_consum = 9;
-					fLayout.setBackgroundResource(R.drawable.beijingkephone);
+					fLayout.setBackgroundResource(R.drawable.beijing_mid_pe);
 					break;
 				case R.id.paris:
 					AppContext.laps = 13;
 					AppContext.oil_consum = 9;
-					fLayout.setBackgroundResource(R.drawable.pariskephone);
+					fLayout.setBackgroundResource(R.drawable.paris_mid_pe);
 					break;
 				case R.id.oslo:
 					AppContext.laps = 12;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.oslokephone);
+					fLayout.setBackgroundResource(R.drawable.oslok_mid_pe);
 					break;
 				case R.id.prague:
 					AppContext.laps = 9;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.praguekephone);
+					fLayout.setBackgroundResource(R.drawable.prague_mid_pe);
 					break;
 				case R.id.copenhague:
 					AppContext.laps = 9;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.copenhaguekephone);
+					fLayout.setBackgroundResource(R.drawable.copenhague_mid_pe);
 					break;
 				case R.id.rome:
 					AppContext.laps = 9;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.romekephone);
+					fLayout.setBackgroundResource(R.drawable.rome_mid_pe);
 					break;
 				case R.id.stockholm:
 					AppContext.laps = 13;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.stockholmkephone);
+					fLayout.setBackgroundResource(R.drawable.stockhplm_mid_pe);
 					break;
 				case R.id.berlin:
 					AppContext.laps = 11;
 					AppContext.oil_consum = 9;
-					fLayout.setBackgroundResource(R.drawable.berlinkephone);
+					fLayout.setBackgroundResource(R.drawable.berlin_mid_pe);
 					break;
 				case R.id.tokyo:
 					AppContext.laps = 12;
 					AppContext.oil_consum = 9;
-					fLayout.setBackgroundResource(R.drawable.tokyokephone);
+					fLayout.setBackgroundResource(R.drawable.tokyo_mid_pe);
 					break;
 				case R.id.mexico:
 					AppContext.laps = 14;
 					AppContext.oil_consum = 9;
-					fLayout.setBackgroundResource(R.drawable.mexicokephone);
+					fLayout.setBackgroundResource(R.drawable.mexico_mid_pe);
 					break;
 				case R.id.sydney:
 					AppContext.laps = 14;
 					AppContext.oil_consum = 10;
-					fLayout.setBackgroundResource(R.drawable.sydneykephone);
+					fLayout.setBackgroundResource(R.drawable.sydney_mid_pe);
 					break;
 				case R.id.toronto:
 					AppContext.laps = 18;
 					AppContext.oil_consum = 8;
-					fLayout.setBackgroundResource(R.drawable.torontokephone);
+					fLayout.setBackgroundResource(R.drawable.toronto_mid_pe);
 					break;
 				case R.id.saint_peter:
 					AppContext.laps = 19;
 					AppContext.oil_consum = 9;
-					fLayout.setBackgroundResource(R.drawable.saint_peterkephone);
+					fLayout.setBackgroundResource(R.drawable.saintperter_mid_pe);
 					break;
 				default:
 					break;
@@ -410,8 +414,10 @@ public class MyCityActivity extends Activity implements View.OnClickListener{
 		
 		mIntent = new Intent(MyCityActivity.this,BLEconfig.class);
 		
-		screenHeight = AppContext.screenHeight;
-		screenWidth = AppContext.screenWidth;
+		//screenHeight = AppContext.screenHeight;
+		//screenWidth = AppContext.screenWidth;
+		screenHeight = ScreenUtil.getScreenHeightPixels(this);
+		screenWidth = ScreenUtil.getScreenWidthPixels(this);
 		
 		disBtn = (ImageButton) findViewById(R.id.dismiss);
 		disBtn.setOnClickListener(this);
@@ -423,13 +429,13 @@ public class MyCityActivity extends Activity implements View.OnClickListener{
 		raceBtn.setOnClickListener(this);
 		
 		if (AppContext.device == "phone"){
-			
-			FrameLayout.LayoutParams params3 = new FrameLayout.LayoutParams(screenWidth*1/10, screenWidth*1/10);
-			params3.setMargins((int) (screenWidth*0.88), (int) (screenHeight*0.23), 0, 0);
+
+			RelativeLayout.LayoutParams params3 = new RelativeLayout.LayoutParams(screenWidth*1/10, screenWidth*1/10);
+			params3.setMargins((int) (screenWidth*0.89), (int) ((screenHeight-screenWidth/0.7)/2+screenWidth/0.7*0.20), 0, 0);
 			disBtn.setLayoutParams(params3);
-			
-			setPosi(trainBtn, (float)0.2, (float)0.76,(float)1.2);
-			setPosi(raceBtn, (float)0.55, (float)0.76,(float)1.2);
+
+			setPosi(trainBtn, (float)0.2, (float)0.80,(float)1.2);
+			setPosi(raceBtn, (float)0.55, (float)0.80,(float)1.2);
 			if (AppContext.lanuage) {//zh
 					trainBtn.setBackgroundResource(R.drawable.trainbtn);
 					raceBtn.setBackgroundResource(R.drawable.racebtn);
@@ -437,14 +443,15 @@ public class MyCityActivity extends Activity implements View.OnClickListener{
 					trainBtn.setBackgroundResource(R.drawable.trainbtne);
 					raceBtn.setBackgroundResource(R.drawable.racebtne);
 				}
+
 			}else if(AppContext.device == "pad"){
 				
 				FrameLayout.LayoutParams params3 = new FrameLayout.LayoutParams(screenWidth*1/10, screenWidth*1/10);
-				params3.setMargins((int) (screenWidth*0.78), (int) (screenHeight*0.21), 0, 0);
+				params3.setMargins((int) (screenWidth*0.78),  (int) ((screenHeight-screenWidth/0.7)/2+screenWidth/0.7*0.20), 0, 0);
 				disBtn.setLayoutParams(params3);
 				
-				setPosi(trainBtn, (float)0.2, (float)0.76,1);
-				setPosi(raceBtn, (float)0.55, (float)0.76,1);
+				setPosi(trainBtn, (float)0.2, (float)0.57,1);
+				setPosi(raceBtn, (float)0.55, (float)0.57,1);
 				if (AppContext.lanuage) {//zh
 					trainBtn.setBackgroundResource(R.drawable.trainbtn);
 					raceBtn.setBackgroundResource(R.drawable.racebtn);
@@ -458,11 +465,25 @@ public class MyCityActivity extends Activity implements View.OnClickListener{
 	}
 	public void setPosi(ImageButton imageButton,float left,float top,float per) {
 		FrameLayout.LayoutParams params3 = new FrameLayout.LayoutParams((int) (screenWidth*0.21*per), (int) (screenWidth*0.1*per));
-		params3.setMargins((int) (screenWidth*left), (int) (screenHeight*top), 0, 0);
+		params3.setMargins((int) (screenWidth*left), (int) (screenWidth/0.7*top), 0, 0);
 		imageButton.setLayoutParams(params3);
 		
 	}
-	 public void race(){
+
+	@Override
+	protected void onResume() {
+		new Handler().postDelayed(new Runnable() {
+			@Override
+			public void run() {
+
+
+			}
+		},3000);
+
+		super.onResume();
+	}
+
+	public void race(){
 	    	
 	    	lightDialog = new LightDialog(this,R.style.Dialog_Fullscreen);
 	    	
@@ -515,11 +536,6 @@ public class MyCityActivity extends Activity implements View.OnClickListener{
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.dismiss:
-			/*FrameLayout.LayoutParams Rl= (FrameLayout.LayoutParams) disBtn.getLayoutParams();
-			Rl.width=(int) (disBtn.getWidth()*0.9);
-			Rl.height = (int) (disBtn.getHeight()*0.9);
-			disBtn.setLayoutParams(Rl);*/
-			
 			finish();
 			break;
 		case R.id.trainbtn:

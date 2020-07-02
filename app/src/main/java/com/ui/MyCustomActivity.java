@@ -152,14 +152,12 @@ public class MyCustomActivity extends Activity implements OnClickListener {
 					findViewById(R.id.custom_back).setBackgroundResource(R.drawable.background_custom_rp);
 					guideBtn.setBackgroundResource(R.drawable.guiding);
 					settingBtn.setBackgroundResource(R.drawable.setting);
-					
 					trainBtn.setBackgroundResource(R.drawable.trainbtn);
 					raceBtn.setBackgroundResource(R.drawable.racebtn);
 				}else {
 					findViewById(R.id.custom_back).setBackgroundResource(R.drawable.background_custom_pe);
 					guideBtn.setBackgroundResource(R.drawable.guidinge);
 					settingBtn.setBackgroundResource(R.drawable.settinge);
-					
 					trainBtn.setBackgroundResource(R.drawable.trainbtne);
 					raceBtn.setBackgroundResource(R.drawable.racebtne);
 				}

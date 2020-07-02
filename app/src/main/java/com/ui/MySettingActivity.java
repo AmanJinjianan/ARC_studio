@@ -20,6 +20,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,7 +37,7 @@ public class MySettingActivity extends Activity implements OnClickListener {
 	private ImageButton settingBtn, guidingBtn, disBtn;
 	//private DisplayMetrics dm;
 	public int screenWidth, screenHeight;
-	ImageButton button1, button2, button3, button4, button5;
+	ImageButton button1, button2, btn_novoice, btn_confirm, btn_voice;
 	TextView textView, textView1;
 	ImageView redface, blueface;
 
@@ -75,7 +76,6 @@ public class MySettingActivity extends Activity implements OnClickListener {
 
 		setContentView(R.layout.activity_setting);
 
-		// 鍙傛暟1锛歯ame锛屽弬鏁�2锛氬瓨鍌ㄦā寮�
 		sharedPreferences = getSharedPreferences("configdata", MODE_PRIVATE);
 		editor = sharedPreferences.edit();
 
@@ -172,35 +172,32 @@ public class MySettingActivity extends Activity implements OnClickListener {
 		}
 
 		// no_voice
-		button3 = (ImageButton) findViewById(R.id.imageButton_no_voice);
-		button3.setOnClickListener(this);
+		btn_novoice = (ImageButton) findViewById(R.id.imageButton_no_voice);
+		btn_novoice.setOnClickListener(this);
 
 		// voice
-		button5 = (ImageButton) findViewById(R.id.imageButton_voice);
-		button5.setOnClickListener(this);
+		btn_voice = (ImageButton) findViewById(R.id.imageButton_voice);
+		btn_voice.setOnClickListener(this);
 
 		if (MenuActivity.isVoice) {
-			button5.setBackgroundResource(R.drawable.voice_blue);
-			button3.setBackgroundResource(R.drawable.no_gray);
+			btn_voice.setBackgroundResource(R.drawable.voice_blue);
+			btn_novoice.setBackgroundResource(R.drawable.no_gray);
 			Log.i("info", "isVoice: ............." + MenuActivity.isVoice);
-			button5.setEnabled(false);
-			button3.setEnabled(true);
-			// 鏈夊０鎸夐挳
-			button5.setVisibility(View.VISIBLE);
+			btn_voice.setEnabled(false);
+			btn_novoice.setEnabled(true);
+			btn_voice.setVisibility(View.VISIBLE);
 		} else {
-			button5.setBackgroundResource(R.drawable.no_blue);
-			button3.setBackgroundResource(R.drawable.voice_gray);
+			btn_voice.setBackgroundResource(R.drawable.no_blue);
+			btn_novoice.setBackgroundResource(R.drawable.voice_gray);
 			Log.i("info", "isVoice: ????????????????????"
 					+ MenuActivity.isVoice);
-			button3.setEnabled(false);
-			button5.setEnabled(true);
-			// 鏃犲０鎸夐挳
-			button3.setVisibility(View.VISIBLE);
+			btn_novoice.setEnabled(false);
+			btn_voice.setEnabled(true);
+			btn_novoice.setVisibility(View.VISIBLE);
 		}
 
-		// 纭畾鎸夐挳
-		button4 = (ImageButton) findViewById(R.id.set_confirm);
-		button4.setOnClickListener(this);
+		btn_confirm = (ImageButton) findViewById(R.id.set_confirm);
+		btn_confirm.setOnClickListener(this);
 
 		// redface
 		redface = (ImageView) findViewById(R.id.imageview_redface);
@@ -211,70 +208,54 @@ public class MySettingActivity extends Activity implements OnClickListener {
 		if (AppContext.device == "phone") {
 
 			// guidingBtn
-			FrameLayout.LayoutParams params12 = new FrameLayout.LayoutParams(
-					(int) (screenWidth * 0.13), (int) (screenWidth * 0.16));
-			params12.setMargins((int) (screenWidth * 4 / 20),
-					(int) ((screenHeight * 1 / 16)), 0, 0);
+			RelativeLayout.LayoutParams params12 = new RelativeLayout.LayoutParams((int) (screenWidth * 0.13), (int) (screenWidth * 0.16));
+			params12.setMargins((int) (screenWidth * 4 / 20),(int) ((screenHeight * 1 / 16)), 0, 0);
 			guidingBtn.setLayoutParams(params12);
 
 			// setting_btn
-			FrameLayout.LayoutParams params21 = new FrameLayout.LayoutParams(
-					(int) (screenWidth * 0.13), (int) (screenWidth * 0.16));
-			params21.setMargins((screenWidth * 1 / 20), screenHeight * 1 / 16,
-					0, 0);
+			RelativeLayout.LayoutParams params21 = new RelativeLayout.LayoutParams((int) (screenWidth * 0.13), (int) (screenWidth * 0.16));
+			params21.setMargins((screenWidth * 1 / 20), screenHeight * 1 / 16,0, 0);
 			settingBtn.setLayoutParams(params21);
 
 			// disBtn
-			FrameLayout.LayoutParams params3 = new FrameLayout.LayoutParams(
-					screenWidth * 1 / 9, screenWidth * 1 / 9);
-			params3.setMargins((int) (screenWidth * 0.88),
-					(int) ((screenHeight * 0.17)), 0, 0);
+			RelativeLayout.LayoutParams params3 = new RelativeLayout.LayoutParams(screenWidth * 1 / 9, screenWidth * 1 / 9);
+			params3.setMargins((int) (screenWidth * 0.88),(int) ((screenHeight-screenWidth/0.84)/2)+39, 0, 0);
 			disBtn.setLayoutParams(params3);
 
 			// line1_edit
-			setPosi(editText1, screenWidth * 2 / 5, screenWidth * 1 / 11, 0.19,
-					0.60);// 058
+			setPosi(editText1, screenWidth * 2 / 5, screenWidth * 1 / 11, 0.19,0.31);// 058
 			editText1.setTextSize(15);
 			// line2_edit
-			setPosi(editText2, screenWidth * 2 / 5, screenWidth * 1 / 11, 0.56,
-					0.60);// 058
+			setPosi(editText2, screenWidth * 2 / 5, screenWidth * 1 / 11, 0.56,0.31);// 058
 			editText2.setTextSize(15);
 
 			// 鏃犲０鍠囧彮
-			setPosi(button3, screenWidth * 1 / 8, screenWidth * 1 / 9, 0.52,
-					0.79);
+			setPosi(btn_novoice, screenWidth * 1 / 8, screenWidth * 1 / 9, 0.52,0.51);
 			// 鏈夊０鍠囧彮
-			setPosi(button5, screenWidth * 1 / 8, screenWidth * 1 / 9, 0.38,
-					0.79);
+			setPosi(btn_voice, screenWidth * 1 / 8, screenWidth * 1 / 9, 0.38,0.51);
 
 			// 纭畾鎸夐挳
-			FrameLayout.LayoutParams params1 = new FrameLayout.LayoutParams(
-					(int) (screenWidth * 1 / 3.8), (int) (screenWidth * 0.111));
-			params1.setMargins((int) (screenWidth * 0.3685),
-					(int) (screenHeight * 0.691), 0, 0);// 0.691
-			button4.setLayoutParams(params1);
+			FrameLayout.LayoutParams params1 = new FrameLayout.LayoutParams((int) (screenWidth * 1 / 3.8), (int) (screenWidth * 0.111));
+			params1.setMargins((int) (screenWidth * 0.35),(int) (screenWidth*2.17 * 0.43), 0, 0);// 0.691
+			btn_confirm.setLayoutParams(params1);
 
 			// redface
-			setPosi(redface, (int) (screenWidth * 1 / 4.8),
-					(int) (screenWidth * 1 / 4.8), 0.21, 0.44);
+			setPosi(redface, (int) (screenWidth * 1 / 4.8),(int) (screenWidth * 1 / 4.8), 0.20, 0.16);
 			// blueface
-			setPosi(blueface, (int) (screenWidth * 1 / 4.8),
-					(int) (screenWidth * 1 / 4.8), 0.58, 0.44);
+			setPosi(blueface, (int) (screenWidth * 1 / 4.8),(int) (screenWidth * 1 / 4.8), 0.58, 0.16);
 
 			if (AppContext.lanuage) {// zh
-				theFrameLayout
-						.setBackgroundResource(R.drawable.background_setp);
+				theFrameLayout.setBackgroundResource(R.drawable.bg_setting);
 				guidingBtn.setBackgroundResource(R.drawable.guiding);
 				settingBtn.setBackgroundResource(R.drawable.setting);
 
-				button4.setBackgroundResource(R.drawable.confirm);
+				btn_confirm.setBackgroundResource(R.drawable.confirm);
 			} else {
-				theFrameLayout
-						.setBackgroundResource(R.drawable.background_set_pe);
+				theFrameLayout.setBackgroundResource(R.drawable.bg_setting_e);
 				guidingBtn.setBackgroundResource(R.drawable.guidinge);
 				settingBtn.setBackgroundResource(R.drawable.settinge);
 
-				button4.setBackgroundResource(R.drawable.confirme);
+				btn_confirm.setBackgroundResource(R.drawable.confirme);
 			}
 		} else if (AppContext.device == "pad") {
 
@@ -300,47 +281,46 @@ public class MySettingActivity extends Activity implements OnClickListener {
 
 			// line1_edit
 			setPosi(editText1, screenWidth * 2 / 5, screenWidth * 1 / 11, 0.26,
-					0.58);
+					0.29);
 			// line2_edit
 			setPosi(editText2, screenWidth * 2 / 5, screenWidth * 1 / 11, 0.56,
-					0.58);
+					0.29);
 
 			// 鏃犲０鍠囧彮
-			setPosi(button3, screenWidth * 1 / 8, screenWidth * 1 / 9, 0.52,
-					0.79);
+			setPosi(btn_novoice, screenWidth * 1 / 8, screenWidth * 1 / 9, 0.52,
+					0.51);
 			// 鏈夊０鍠囧彮
-			setPosi(button5, screenWidth * 1 / 8, screenWidth * 1 / 9, 0.38,
-					0.79);
+			setPosi(btn_voice, screenWidth * 1 / 8, screenWidth * 1 / 9, 0.38,
+					0.51);
 
 			// 纭畾鎸夐挳
 			FrameLayout.LayoutParams params1 = new FrameLayout.LayoutParams(
 					screenWidth * 1 / 4, screenWidth * 1 / 9);
 			params1.setMargins(screenWidth * 3 / 8,
 					(int) (screenHeight * 0.93 / 1.33), 0, 0);
-			button4.setLayoutParams(params1);
+			btn_confirm.setLayoutParams(params1);
 
 			// redface
 			setPosi(redface, screenWidth * 1 / 7, screenWidth * 1 / 7, 0.28,
-					0.44);
+					0.16);
 			// blueface
 			setPosi(blueface, screenWidth * 1 / 7, screenWidth * 1 / 7, 0.58,
-					0.44);
+					0.16);
 
 			// ///////////////////////////////////////////////////////////////////
 			if (AppContext.lanuage) {// zh
-				theFrameLayout.setBackgroundResource(R.drawable.background_set);
+				theFrameLayout.setBackgroundResource(R.drawable.bg_setting);
 				guidingBtn.setBackgroundResource(R.drawable.guiding);
 				settingBtn.setBackgroundResource(R.drawable.setting);
 
-				button4.setBackgroundResource(R.drawable.confirm);
+				btn_confirm.setBackgroundResource(R.drawable.confirm);
 			} else {
 				theFrameLayout
-						.setBackgroundResource(R.drawable.background_sete);
+						.setBackgroundResource(R.drawable.bg_setting_e);
 				guidingBtn.setBackgroundResource(R.drawable.guidinge);
 				settingBtn.setBackgroundResource(R.drawable.settinge);
 
-				button4.setBackgroundResource(R.drawable.confirme);
-
+				btn_confirm.setBackgroundResource(R.drawable.confirme);
 				editText1.setTextSize(26);
 				editText2.setTextSize(26);
 			}
@@ -366,29 +346,24 @@ public class MySettingActivity extends Activity implements OnClickListener {
 			Double leftPer, Double rightPer) {
 		FrameLayout.LayoutParams params1 = new FrameLayout.LayoutParams(width,
 				height);
-		params1.setMargins((int) (screenWidth * leftPer), (int) (screenHeight
-				* rightPer / 1.33), 0, 0);
+		params1.setMargins((int) (screenWidth * leftPer*0.95), (int) (screenWidth*2.17* rightPer / 1.40), 0, 0);
 		imageButton.setLayoutParams(params1);
 
 	}
 
 	private void setPosi(ImageView imageView, int width, int height,
-			Double leftPer, Double rightPer) {
+			Double leftPer, Double topPer) {
 
-		FrameLayout.LayoutParams params1 = new FrameLayout.LayoutParams(width,
-				height);
-		params1.setMargins((int) (screenWidth * leftPer), (int) (screenHeight
-				* rightPer / 1.33), 0, 0);
+		FrameLayout.LayoutParams params1 = new FrameLayout.LayoutParams(width,height);
+		params1.setMargins((int) (screenWidth * leftPer*0.95), (int) (screenWidth*2.17* topPer / 1.33), 0, 0);
 		imageView.setLayoutParams(params1);
 	}
 
 	private void setPosi(EditText editText, int width, int height,
 			Double leftPer, Double topPer) {
 
-		FrameLayout.LayoutParams params1 = new FrameLayout.LayoutParams(width,
-				height);
-		params1.setMargins((int) (screenWidth * leftPer), (int) (screenHeight
-				* topPer / 1.33), 0, 0);
+		FrameLayout.LayoutParams params1 = new FrameLayout.LayoutParams(width,height);
+		params1.setMargins((int) (screenWidth * leftPer), (int) (screenWidth*2.08* topPer / 1.33), 0, 0);
 		editText.setAlpha((float) 0.9);
 		// editText.setSingleLine(true);
 		editText.setTextColor(Color.WHITE);
@@ -414,46 +389,50 @@ public class MySettingActivity extends Activity implements OnClickListener {
 			finish();
 			break;
 		case R.id.imageButton_voice:// 鏈夊０鍠囧彮
-			button5.setEnabled(false);
-			button3.setEnabled(true);
-			button5.setBackgroundResource(R.drawable.voice_blue);
-			button3.setBackgroundResource(R.drawable.no_gray);
+			btn_voice.setEnabled(false);
+			btn_novoice.setEnabled(true);
+			btn_voice.setBackgroundResource(R.drawable.voice_blue);
+			btn_novoice.setBackgroundResource(R.drawable.no_gray);
 
 			MenuActivity.isVoice = true;
 			Log.i("info", "beee voice");
 			break;
 		case R.id.imageButton_no_voice:// 鏃犲０鍠囧彮
-			button3.setEnabled(false);
-			button5.setEnabled(true);
-			button3.setBackgroundResource(R.drawable.voice_gray);
-			button5.setBackgroundResource(R.drawable.no_blue);
+			btn_novoice.setEnabled(false);
+			btn_voice.setEnabled(true);
+			btn_novoice.setBackgroundResource(R.drawable.voice_gray);
+			btn_voice.setBackgroundResource(R.drawable.no_blue);
 
 			MenuActivity.isVoice = false;
 			Log.i("info", "noooo voice");
+
 			break;
 		case R.id.set_confirm:
-			
-			AppContext.imageState = imageState;
-			if (MenuActivity.isVoice) {
-				editor.putString("voice", "be voice");
-			} else {
-				editor.putString("voice", "no voice");
-			}
+			MyResultDialog reultDialog = new MyResultDialog(this,R.style.Dialog_Fullscreen,null);
+			//reultDialog.getWindow().setBackgroundDrawableResource(R.drawable.image1);
+			reultDialog.show();
 
-			editor.putString("user1", editText1.getText().toString());
-			editor.putString("user2", editText2.getText().toString());
-			editor.commit();
-
-		
-			Log.i("diedie", "ys.." + editText1.getText().toString() + "p"
-					+ editText2.getText().toString());
-			if ((!editText1.getText().toString().equals("请输入用户名"))&& (!editText1.getText().toString().equals("Please Enter"))) {
-				AppContext.useName1 = editText1.getText().toString();
-			}
-			if ((!editText2.getText().toString().equals("请输入用户名"))&& (!editText2.getText().toString().equals("Please Enter")))
-				AppContext.useName2 = editText2.getText().toString();
-
-			MySettingActivity.this.finish();
+//			AppContext.imageState = imageState;
+//			if (MenuActivity.isVoice) {
+//				editor.putString("voice", "be voice");
+//			} else {
+//				editor.putString("voice", "no voice");
+//			}
+//
+//			editor.putString("user1", editText1.getText().toString());
+//			editor.putString("user2", editText2.getText().toString());
+//			editor.commit();
+//
+//
+//			Log.i("diedie", "ys.." + editText1.getText().toString() + "p"
+//					+ editText2.getText().toString());
+//			if ((!editText1.getText().toString().equals("请输入用户名"))&& (!editText1.getText().toString().equals("Please Enter"))) {
+//				AppContext.useName1 = editText1.getText().toString();
+//			}
+//			if ((!editText2.getText().toString().equals("请输入用户名"))&& (!editText2.getText().toString().equals("Please Enter")))
+//				AppContext.useName2 = editText2.getText().toString();
+//
+//			MySettingActivity.this.finish();
 			break;
 		default:
 			break;

@@ -13,6 +13,7 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.bluetoothARC.R;
@@ -68,57 +69,56 @@ public class MyGuideActivity extends Activity implements OnClickListener {
 		if (AppContext.device == "phone"){
 			
 				//guidingBtn
-				FrameLayout.LayoutParams params12 = new FrameLayout.LayoutParams((int) (screenWidth * 0.13), (int) (screenWidth * 0.16));
+			RelativeLayout.LayoutParams params12 = new RelativeLayout.LayoutParams((int) (screenWidth * 0.13), (int) (screenWidth * 0.16));
 				params12.setMargins((int) (screenWidth * 4 / 20),(int) ((screenHeight * 1 / 16)), 0, 0);
 				guidingBtn.setLayoutParams(params12);
 				
 				// setting_btn
-				FrameLayout.LayoutParams params1 = new FrameLayout.LayoutParams((int) (screenWidth * 0.13), (int) (screenWidth * 0.16));
+				RelativeLayout.LayoutParams params1 = new RelativeLayout.LayoutParams((int) (screenWidth * 0.13), (int) (screenWidth * 0.16));
 				params1.setMargins((screenWidth * 1 / 20), screenHeight * 1 / 16, 0, 0);
 				settingBtn.setLayoutParams(params1);
 				
 				// disBtn 
-				FrameLayout.LayoutParams params3 = new FrameLayout.LayoutParams(screenWidth * 1 / 9, screenWidth * 1 / 9);
-				params3.setMargins((int) (screenWidth * 0.88),(int) ((screenHeight * 0.17)), 0, 0);
+				RelativeLayout.LayoutParams params3 = new RelativeLayout.LayoutParams(screenWidth * 1 / 9, screenWidth * 1 / 9);
+				params3.setMargins((int) (screenWidth * 0.88),(int) ((screenHeight-screenWidth/0.84)/2)+39, 0, 0);
 				disBtn.setLayoutParams(params3);
-				
 				
 				//confirm_btn
 				FrameLayout.LayoutParams params4 = new FrameLayout.LayoutParams(screenWidth * 1 / 4, screenWidth * 1 / 9);
-				params4.setMargins(screenWidth * 3 / 8, (int) (screenHeight * 0.6616), 0,0);
+				params4.setMargins((int)(screenWidth * 3 / 8*0.95), (int)(screenWidth/0.84*0.733), 0,0);
 				confirmBtn.setLayoutParams(params4);
 			
-			if (AppContext.lanuage) {//zh
-					findViewById(R.id.myguide_back).setBackgroundResource(R.drawable.background_guide_p);
+			if (!AppContext.lanuage) {//zh
+					findViewById(R.id.myguide_back).setBackgroundResource(R.drawable.bg_guide);
 					guidingBtn.setBackgroundResource(R.drawable.guiding);
 					settingBtn.setBackgroundResource(R.drawable.setting);
 					confirmBtn.setBackgroundResource(R.drawable.confirm);
 					
 					//chinese_view
-					setPosi(chinaBtn, R.id.imageButton_cn, (float) 3.14, (float) 9, (float)1.3);
+				setPosiForPhoneZh(chinaBtn, R.id.imageButton_cn, (float) 3.14, (float)0, (float)1.3);
 					//English_view
-					setPosi(engBtn, R.id.imageButton_en, (float) 10.44, (float) 9, (float)1.3);
+				setPosiForPhoneZh(engBtn, R.id.imageButton_en, (float) 10.44, (float) 0, (float)1.3);
 					
 				}else {
-					findViewById(R.id.myguide_back).setBackgroundResource(R.drawable.background_guide_pe);
+					findViewById(R.id.myguide_back).setBackgroundResource(R.drawable.bg_guide_e);
 					guidingBtn.setBackgroundResource(R.drawable.guidinge);
 					settingBtn.setBackgroundResource(R.drawable.settinge);
 					confirmBtn.setBackgroundResource(R.drawable.confirme);
 					
 					//chinese_view
-					setPosi(chinaBtn, R.id.imageButton_cn, (float) 4.8, (float) 13.5, (float)1.3);
+				setPosiForPhoneEn(chinaBtn, R.id.imageButton_cn, (float)0.20, (float) 0.5, (float)1.3);
 					//English_view
-					setPosi(engBtn, R.id.imageButton_en, (float) 4.8, (float) 8.5, (float)1.3);
+				setPosiForPhoneEn(engBtn, R.id.imageButton_en, (float) 0.20, (float) 0.23, (float)1.3);
 				}
 			}else if(AppContext.device == "pad"){
 				
 				//guidingBtn
-				FrameLayout.LayoutParams params12 = new FrameLayout.LayoutParams((int) (screenWidth * 0.13), (int) (screenWidth * 0.16));
+			RelativeLayout.LayoutParams params12 = new RelativeLayout.LayoutParams((int) (screenWidth * 0.13), (int) (screenWidth * 0.16));
 				params12.setMargins((int) (screenWidth * 4 / 20),(int) ((screenHeight * 1 / 20)), 0, 0);
 				guidingBtn.setLayoutParams(params12);
 				
 				// setting_btn
-				FrameLayout.LayoutParams params1 = new FrameLayout.LayoutParams((int) (screenWidth * 0.13), (int) (screenWidth * 0.16));
+			RelativeLayout.LayoutParams params1 = new RelativeLayout.LayoutParams((int) (screenWidth * 0.13), (int) (screenWidth * 0.16));
 				params1.setMargins((screenWidth * 1 / 20), screenHeight * 1 / 20, 0, 0);
 				settingBtn.setLayoutParams(params1);
 				
@@ -194,6 +194,20 @@ public class MyGuideActivity extends Activity implements OnClickListener {
 
 	}
 
+	public void setPosiForPhoneZh(ImageButton imageButton, int id, float left, float top,float per) {
+		imageButton = (ImageButton) findViewById(id);
+		FrameLayout.LayoutParams params3 = new FrameLayout.LayoutParams((int) (screenWidth * 0.247*per), (int) (screenWidth * 0.1862*per));
+		params3.setMargins((int) (screenWidth * left / 20*0.95), (int) (screenWidth/0.84* 0.24), 0, 0);
+		imageButton.setLayoutParams(params3);
+		imageButton.setOnClickListener(this);
+	}
+	public void setPosiForPhoneEn(ImageButton imageButton, int id, float left, float top,float per) {
+		imageButton = (ImageButton) findViewById(id);
+		FrameLayout.LayoutParams params3 = new FrameLayout.LayoutParams((int) (screenWidth * 0.247*per), (int) (screenWidth * 0.1862*per));
+		params3.setMargins((int) (screenWidth * left), (int) (screenWidth/0.84* top), 0, 0);
+		imageButton.setLayoutParams(params3);
+		imageButton.setOnClickListener(this);
+	}
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
