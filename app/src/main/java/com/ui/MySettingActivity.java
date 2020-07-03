@@ -408,31 +408,31 @@ public class MySettingActivity extends Activity implements OnClickListener {
 
 			break;
 		case R.id.set_confirm:
-			MyResultDialog reultDialog = new MyResultDialog(this,R.style.Dialog_Fullscreen,null);
-			//reultDialog.getWindow().setBackgroundDrawableResource(R.drawable.image1);
-			reultDialog.show();
+//			MyResultDialog reultDialog = new MyResultDialog(this,R.style.Dialog_Fullscreen,null);
+//			//reultDialog.getWindow().setBackgroundDrawableResource(R.drawable.image1);
+//			reultDialog.show();
 
-//			AppContext.imageState = imageState;
-//			if (MenuActivity.isVoice) {
-//				editor.putString("voice", "be voice");
-//			} else {
-//				editor.putString("voice", "no voice");
-//			}
-//
-//			editor.putString("user1", editText1.getText().toString());
-//			editor.putString("user2", editText2.getText().toString());
-//			editor.commit();
-//
-//
-//			Log.i("diedie", "ys.." + editText1.getText().toString() + "p"
-//					+ editText2.getText().toString());
-//			if ((!editText1.getText().toString().equals("请输入用户名"))&& (!editText1.getText().toString().equals("Please Enter"))) {
-//				AppContext.useName1 = editText1.getText().toString();
-//			}
-//			if ((!editText2.getText().toString().equals("请输入用户名"))&& (!editText2.getText().toString().equals("Please Enter")))
-//				AppContext.useName2 = editText2.getText().toString();
-//
-//			MySettingActivity.this.finish();
+			AppContext.imageState = imageState;
+			if (MenuActivity.isVoice) {
+				editor.putString("voice", "be voice");
+			} else {
+				editor.putString("voice", "no voice");
+			}
+
+			editor.putString("user1", editText1.getText().toString());
+			editor.putString("user2", editText2.getText().toString());
+			editor.commit();
+
+
+			Log.i("diedie", "ys.." + editText1.getText().toString() + "p"
+					+ editText2.getText().toString());
+			if ((!editText1.getText().toString().equals("请输入用户名"))&& (!editText1.getText().toString().equals("Please Enter"))) {
+				AppContext.useName1 = editText1.getText().toString();
+			}
+			if ((!editText2.getText().toString().equals("请输入用户名"))&& (!editText2.getText().toString().equals("Please Enter")))
+				AppContext.useName2 = editText2.getText().toString();
+
+			MySettingActivity.this.finish();
 			break;
 		default:
 			break;

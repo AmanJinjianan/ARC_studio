@@ -202,7 +202,7 @@ public class LightDialog extends ProgressDialog {
                 Log.i("info", "light isVoice" + isVoice);
                 // TODO Auto-generated method stub
                 if (isVoice)
-                    //ScanActivity.soundPlaylight();
+                    ScanActivity.soundPlaylight();
 
                     greenOne.setVisibility(View.VISIBLE);
 
@@ -229,7 +229,7 @@ public class LightDialog extends ProgressDialog {
                 Log.i("info", "light isVoice" + isVoice);
                 // TODO Auto-generated method stub
                 if (isVoice)
-                    //ScanActivity.two();
+                    ScanActivity.two();
 
                     greenThree.setVisibility(View.VISIBLE);
             }
@@ -241,7 +241,7 @@ public class LightDialog extends ProgressDialog {
             public void run() {
                 // TODO Auto-generated method stub
                 if (isVoice)
-                    //ScanActivity.one();
+                    ScanActivity.one();
                     greenFour.setVisibility(View.VISIBLE);
             }
         }, 4000);
@@ -250,7 +250,7 @@ public class LightDialog extends ProgressDialog {
             public void run() {
                 // goView.setAnimation(animation);
                 if (isVoice) {
-                    //ScanActivity.the_go_voice();
+                    ScanActivity.the_go_voice();
                 }
 
             }
