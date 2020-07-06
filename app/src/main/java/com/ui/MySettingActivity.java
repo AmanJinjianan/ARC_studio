@@ -223,11 +223,11 @@ public class MySettingActivity extends Activity implements OnClickListener {
 			disBtn.setLayoutParams(params3);
 
 			// line1_edit
-			setPosi(editText1, screenWidth * 2 / 5, screenWidth * 1 / 11, 0.19,0.31);// 058
-			editText1.setTextSize(15);
+			setPosi(editText1, screenWidth * 2 / 5, screenWidth * 1 / 11, 0.19,0.30);// 058
+			editText1.setTextSize(14);
 			// line2_edit
-			setPosi(editText2, screenWidth * 2 / 5, screenWidth * 1 / 11, 0.56,0.31);// 058
-			editText2.setTextSize(15);
+			setPosi(editText2, screenWidth * 2 / 5, screenWidth * 1 / 11, 0.56,0.30);// 058
+			editText2.setTextSize(14);
 
 			// 鏃犲０鍠囧彮
 			setPosi(btn_novoice, screenWidth * 1 / 8, screenWidth * 1 / 9, 0.52,0.51);

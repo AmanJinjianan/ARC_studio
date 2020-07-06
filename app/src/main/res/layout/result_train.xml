@@ -34,7 +34,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
         <com.myview.MyRelayoutLayout
-
             android:id="@+id/center_end110_train"
             android:layout_width="match_parent"
             android:layout_centerInParent="true"

@@ -88,7 +88,7 @@ public class MyGuideActivity extends Activity implements OnClickListener {
 				params4.setMargins((int)(screenWidth * 3 / 8*0.95), (int)(screenWidth/0.84*0.733), 0,0);
 				confirmBtn.setLayoutParams(params4);
 			
-			if (!AppContext.lanuage) {//zh
+			if (AppContext.lanuage) {//zh
 					findViewById(R.id.myguide_back).setBackgroundResource(R.drawable.bg_guide);
 					guidingBtn.setBackgroundResource(R.drawable.guiding);
 					settingBtn.setBackgroundResource(R.drawable.setting);

@@ -1363,9 +1363,6 @@ public class TrainActivity extends Activity implements OnClickListener
 			}
 			//line2 over command
 			byte[] bb = {(byte) 0xa5,0x02};
-			/*mIntent.putExtra(BLEconfig.EXTRA_COMMAND, BLEconfig.COMMAND_WRITE_CHARACTERISTIC);
-			mIntent.putExtra(BLEconfig.WRITE_VALUE, bb);
-			startService(mIntent);*/
 			
 			Tools.mBleService.characteristicWrite.setValue(bb);
 	        Tools.mBleService.mBluetoothGatt.writeCharacteristic(Tools.mBleService.characteristicWrite);
@@ -1755,14 +1752,18 @@ public class TrainActivity extends Activity implements OnClickListener
 					remainder1 = remainder;
 					
 					byte[] cc = {(byte) 0x5a};
-					/*mIntent.putExtra(BLEconfig.EXTRA_COMMAND, BLEconfig.COMMAND_WRITE_CHARACTERISTIC);
-					mIntent.putExtra(BLEconfig.WRITE_VALUE, cc);
-					startService(mIntent);*/
-					
 					Tools.mBleService.characteristicWrite.setValue(cc);
 			        Tools.mBleService.mBluetoothGatt.writeCharacteristic(Tools.mBleService.characteristicWrite);
-					
-					
+					if(panelViewB.theModel.lineXIsDamaged == "lineX_damaged"){
+						new Handler().postDelayed(new Runnable() {
+							@Override
+							public void run() {
+								byte[] bb = {(byte) 0xa5,0x02};
+								Tools.mBleService.characteristicWrite.setValue(bb);
+								Tools.mBleService.mBluetoothGatt.writeCharacteristic(Tools.mBleService.characteristicWrite);
+							}
+						},150);
+					}
 					if (backButton.getVisibility() == View.INVISIBLE) {
 						backButton.setVisibility(View.VISIBLE);
 					}
@@ -1803,12 +1804,19 @@ public class TrainActivity extends Activity implements OnClickListener
 					remainder2 = remainder;
 					
 					byte[] dd = {(byte) 0x5a};
-					/*mIntent.putExtra(BLEconfig.EXTRA_COMMAND, BLEconfig.COMMAND_WRITE_CHARACTERISTIC);
-					mIntent.putExtra(BLEconfig.WRITE_VALUE, dd);
-					startService(mIntent);*/
-					
 					Tools.mBleService.characteristicWrite.setValue(dd);
 			        Tools.mBleService.mBluetoothGatt.writeCharacteristic(Tools.mBleService.characteristicWrite);
+
+			        if(panelViewA.theModel.lineXIsDamaged == "lineX_damaged"){
+						new Handler().postDelayed(new Runnable() {
+							@Override
+							public void run() {
+								byte[] bb = {(byte) 0xa5,0x01};
+								Tools.mBleService.characteristicWrite.setValue(bb);
+								Tools.mBleService.mBluetoothGatt.writeCharacteristic(Tools.mBleService.characteristicWrite);
+							}
+						},150);
+					}
 					
 					if (backButton.getVisibility() == View.INVISIBLE) {
 						backButton.setVisibility(View.VISIBLE);

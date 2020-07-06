@@ -40,9 +40,11 @@ public class MyResultDialogTrain extends Dialog implements View.OnClickListener{
 		super(context);
 		// TODO Auto-generated constructor stub
 	}
+	private Context mmContext;
 	//private TrainActivity theTrainActivity = new TrainActivity();
 	public MyResultDialogTrain(Context context, int theme) {
 		super(context, theme);
+		mmContext = context;
 	}
 	
 	/*private TextView endLineOne,endLineTwo;
@@ -68,6 +70,7 @@ public class MyResultDialogTrain extends Dialog implements View.OnClickListener{
 	
 	Handler mHandler;
 	private boolean lightState = true;
+	private com.myview.MyRelayoutLayout mRelay;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -80,7 +83,7 @@ public class MyResultDialogTrain extends Dialog implements View.OnClickListener{
 		theActivity = new TrainActivity();
 		
 		center_end = (RelativeLayout) findViewById(R.id.center_end110_train);
-		
+		mRelay = findViewById(R.id.center_end110_train);
 		//限定中间核心部位宽高
 		/*LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(screenWidth,(int)(screenWidth*0.67));
 		params.setMargins((int) (screenWidth*0.00), (int) (screenHeight*0.00), 0, 0);
@@ -91,7 +94,7 @@ public class MyResultDialogTrain extends Dialog implements View.OnClickListener{
 		imageback = (ImageButton)findViewById(R.id.imageback_train);
 		imageback.setOnClickListener(this);
 		
-		useName1 = new TextView(getContext());
+		useName1 = new TextView(mmContext);
 		useName1.setSingleLine(true);
 		useName1.setTextSize(textSize-5);
 		useName2 = new TextView(getContext());
@@ -152,7 +155,7 @@ public class MyResultDialogTrain extends Dialog implements View.OnClickListener{
 			setPosi(textViewfast2, "00:00:000", Color.WHITE, 0.64, 0.848);
 			if (AppContext.lanuage) {//zh
 				findViewById(R.id.result_t).setBackgroundResource(R.drawable.bg_result_train);
-				findViewById(R.id.center_end110_train).setBackgroundResource(R.drawable.bg_mid_train_result);
+				mRelay.setBackgroundResource(R.drawable.bg_mid_train_result);
 				findViewById(R.id.iv_result_train_logo).setBackgroundResource(R.drawable.logo);
 				imageback.setBackgroundResource(R.drawable.back_btn);
 			} else {
